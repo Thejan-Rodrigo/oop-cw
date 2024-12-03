@@ -1,3 +1,10 @@
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Configuration {
     private int totalTickets;
     private int ticketReleaseRate;
@@ -42,5 +49,31 @@ public class Configuration {
     public void setMaxTicketCapacity(int maxTicketCapacity) {
         this.maxTicketCapacity = maxTicketCapacity;
     }
-    
+
+    @Override
+    public String toString(){
+        return "{\"totalTickets\":" + this.totalTickets + ",\"ticketReleaseRate\":" + this.ticketReleaseRate + ",\"customerRetrievalRate\":" + this.customerRetrievalRate + ",\"maxTicketCapacity\":" + this.maxTicketCapacity + "}";
+    }
+
+    public void saveConfig(Configuration configuration){
+        Gson gson = new Gson();
+
+        try(FileWriter writer = new FileWriter("configData.json")) {
+            gson.toJson(configuration, writer);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void loadConfig(){
+        Gson gson = new Gson();
+
+        try {
+            FileReader reader = new FileReader("configData.json");
+            Configuration data = gson.fromJson(reader, Configuration.class);
+            System.out.println(data.toString());
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -1,5 +1,10 @@
+import com.google.gson.Gson;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Configuration configuration = new Configuration(10, 55, 70, 50);
+
+        configuration.saveConfig(configuration);
+        configuration.loadConfig();
     }
 }
