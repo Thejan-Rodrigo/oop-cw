@@ -7,11 +7,13 @@ public class Main {
         configuration.saveConfig(configuration);
         configuration.loadConfig();
 
-        Vendor vendor1 = new Vendor("1234", 5, 50);
+        TicketPool ticketPool1 = new TicketPool(50);
+
+        Vendor vendor1 = new Vendor("1234", 5, 50, ticketPool1);
         Thread vendorThread = new Thread(vendor1, "vendor");
         vendorThread.start();
 
-        Customer customer1 = new Customer("4321", 12);
+        Customer customer1 = new Customer("4321", 3, ticketPool1);
         Thread customerThread = new Thread(customer1, "customer");
         customerThread.start();
     }
