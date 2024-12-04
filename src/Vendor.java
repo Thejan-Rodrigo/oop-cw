@@ -55,7 +55,6 @@ public class Vendor implements Runnable{
         System.out.println("This is Vendor Class run Methode");
         System.out.println(newTicket.toString());
 
-        System.out.println(Thread.currentThread().getName());
     }
 
 
