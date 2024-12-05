@@ -185,4 +185,14 @@
   2024-12-05 10:20:01 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=55450, eventName='Hello, ticketPrice=25.0} 
   2024-12-05 10:20:03 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 1
   2024-12-05 10:20:03 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=554466, eventName='Hello, ticketPrice=25.0} 
+  2024-12-05 12:03:24 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 1
+  2024-12-05 12:03:24 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 2
+  2024-12-05 12:03:24 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 3
+  2024-12-05 12:03:24 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 4
+  2024-12-05 12:03:24 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 3 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-05 12:03:26 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 2 - Ticket is - Ticket{ticketId=55442, eventName='Hello, ticketPrice=25.0} 
+  2024-12-05 12:03:28 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 1 - Ticket is - Ticket{ticketId=55443, eventName='Hello, ticketPrice=25.0} 
+  2024-12-05 12:03:30 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=55444, eventName='Hello, ticketPrice=25.0} 
+  2024-12-05 12:03:44 INFO  TicketPool:35 - Ticket added by - vendor - current size is - 1
+  2024-12-05 12:03:44 INFO  TicketPool:50 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=554466, eventName='Hello, ticketPrice=25.0} 
   

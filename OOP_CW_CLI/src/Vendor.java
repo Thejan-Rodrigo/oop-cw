@@ -37,7 +37,7 @@ public class Vendor implements Runnable{
 
     @Override
     public void run(){
-        for(int i = 0; i < ticketsPerRelease; i++){
+        for(int i = 0; i < ticketsPerRelease - 1; i++){
             Ticket newTicket = new Ticket(55441 + i,"Hello", 25.00);
             ticketPool.addTickets(newTicket);
             //System.out.println("This is Vendor Class run Methode");
