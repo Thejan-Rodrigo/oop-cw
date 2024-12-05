@@ -9,23 +9,23 @@ public class Main {
         int cusRetRate = customerRetrievalRate();
         int maxTicketCap = maxTicketCapacity();
 
-        System.out.println(totTickets);
-        System.out.println(ticketRelRate);
-        System.out.println(cusRetRate);
-        System.out.println(maxTicketCap);
+        //System.out.println(totTickets);
+        //System.out.println(ticketRelRate);
+        //System.out.println(cusRetRate);
+        //System.out.println(maxTicketCap);
 
         Configuration configuration = new Configuration(totTickets, ticketRelRate, cusRetRate, maxTicketCap);
 
         configuration.saveConfig(configuration);
         configuration.loadConfig();
 
-        TicketPool ticketPool1 = new TicketPool(50);
+        TicketPool ticketPool1 = new TicketPool(configuration.getMaxTicketCapacity());
 
-        Vendor vendor1 = new Vendor("1234", 5, 50, ticketPool1);
+        Vendor vendor1 = new Vendor("1234", configuration.getTotalTickets(), configuration.getTicketReleaseRate(), ticketPool1);
         Thread vendorThread = new Thread(vendor1, "vendor");
         vendorThread.start();
 
-        Customer customer1 = new Customer("4321", 3, ticketPool1);
+        Customer customer1 = new Customer("4321", configuration.getCustomerRetrievalRate(), ticketPool1);
         Thread customerThread = new Thread(customer1, "customer");
         customerThread.start();
     }

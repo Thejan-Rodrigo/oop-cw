@@ -27,9 +27,9 @@ public class Customer implements Runnable{
 
     @Override
     public void run(){
-        for(int i = 0; i < 6; i++){
+        for(int i = 0; i < 11; i++){
             Ticket ticket = this.ticketPool.removeTickets();
-            System.out.println("Ticket is - " + ticket + " - Customer name is - " + Thread.currentThread().getName());
+            //System.out.println("Ticket is - " + ticket + " - Customer name is - " + Thread.currentThread().getName());
 
             try {
                 Thread.sleep(retrievalInterval * 1000);
@@ -37,7 +37,7 @@ public class Customer implements Runnable{
                 throw new RuntimeException(e);
             }
         }
-        System.out.println("This is Customer class run Method");
-        System.out.println(Thread.currentThread().getName());
+        //System.out.println("This is Customer class run Method");
+        //System.out.println(Thread.currentThread().getName());
     }
 }

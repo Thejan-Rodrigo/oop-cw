@@ -71,7 +71,7 @@ public class Configuration {
         try {
             FileReader reader = new FileReader("configData.json");
             Configuration data = gson.fromJson(reader, Configuration.class);
-            System.out.println(data.toString());
+            //System.out.println(data.toString());
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

@@ -37,11 +37,11 @@ public class Vendor implements Runnable{
 
     @Override
     public void run(){
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < ticketsPerRelease; i++){
             Ticket newTicket = new Ticket(55441 + i,"Hello", 25.00);
             ticketPool.addTickets(newTicket);
-            System.out.println("This is Vendor Class run Methode");
-            System.out.println(newTicket.toString());
+            //System.out.println("This is Vendor Class run Methode");
+            //System.out.println(newTicket.toString());
         }
 
         try {
@@ -52,8 +52,8 @@ public class Vendor implements Runnable{
 
         Ticket newTicket = new Ticket(554466,"Hello", 25.00);
         ticketPool.addTickets(newTicket);
-        System.out.println("This is Vendor Class run Methode");
-        System.out.println(newTicket.toString());
+        //System.out.println("This is Vendor Class run Methode");
+        //System.out.println(newTicket.toString());
 
     }
 
