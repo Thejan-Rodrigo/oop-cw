@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Configure } from '../model/class/Configure';
+import { ConfigService } from '../services/config.service';
 
 @Component({
   selector: 'app-config-form',
@@ -13,7 +14,11 @@ export class ConfigFormComponent {
   
   configureObj: Configure = new Configure();
 
+  configService = inject(ConfigService);
+
   onClickStart(){
-    console.log(this.configureObj.numTickets)
+    this.configService.postConfig(this.configureObj).subscribe((res:Configure)=>{
+      alert(res.numTickets)
+    })
   }
 }
