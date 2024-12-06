@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class="col-2">
     <div class="card">
         <div class="card-header bg-success">
             Configuration Form
@@ -7,23 +7,20 @@
             <div class="row">
                 <div class="col-7">
                     <label for="">Total Number of Tickets</label>
-                    <input type="text" class="from-control">
-
+                    <input type="text" #box1 required [(ngModel)]="configureObj.numTickets" class="from-control">
+                    
                     <label for="">Ticket Release Rate</label>
-                    <input type="text" class="from-control">
+                    <input type="text" #box2 required [(ngModel)]="configureObj.releaseRate" class="from-control">
 
                     <label for="">Customer Retrieval Rate</label>
-                    <input type="text" class="from-control">
+                    <input type="text" #box3 required [(ngModel)]="configureObj.retrievalRate" class="from-control">
 
                     <label for="">Maximum Ticket Capacity</label>
-                    <input type="text" class="from-control">
+                    <input type="text" #box4 required [(ngModel)]="configureObj.ticketCapacity" class="from-control">
                 </div>
                 <div class="row pt-2">
                     <div class="col-6 text-center">
-                        <button class="btn btn-secondary">Reset</button>
-                    </div>
-                    <div class="col-6 text-center">
-                        <button class="btn btn-success">Save</button>
+                        <button class="btn btn-success" (click)="onClickStart()">Start</button>
                     </div>
                 </div>
             </div>
