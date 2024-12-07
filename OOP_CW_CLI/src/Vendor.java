@@ -3,12 +3,18 @@ public class Vendor implements Runnable{
     private int ticketsPerRelease;
     private int releaseInterval;
     private TicketPool ticketPool;
+    private int numVendors;
+    private int numReleases;
+    private int totTickets;
 
-    public Vendor(String vendorId, int ticketsPerRelease, int releaseInterval, TicketPool ticketPool){
+    public Vendor(String vendorId, int ticketsPerRelease, int releaseInterval, TicketPool ticketPool, int numVendors, int numReleases, int totTickets){
         this.vendorId = vendorId;
         this.ticketsPerRelease = ticketsPerRelease;
         this.releaseInterval = releaseInterval;
         this.ticketPool = ticketPool;
+        this.numVendors = numVendors;
+        this.numReleases = numReleases;
+        this.totTickets = totTickets;
     }
 
     public String getVendorId() {
@@ -35,27 +41,49 @@ public class Vendor implements Runnable{
         this.releaseInterval = releaseInterval;
     }
 
-    @Override
-    public void run(){
-        for(int i = 0; i < ticketsPerRelease - 1; i++){
-            Ticket newTicket = new Ticket(55441 + i,"Hello", 25.00);
-            ticketPool.addTickets(newTicket);
-            //System.out.println("This is Vendor Class run Methode");
-            //System.out.println(newTicket.toString());
-        }
-
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        Ticket newTicket = new Ticket(554466,"Hello", 25.00);
-        ticketPool.addTickets(newTicket);
-        //System.out.println("This is Vendor Class run Methode");
-        //System.out.println(newTicket.toString());
-
+    public int getNumVendors() {
+        return numVendors;
     }
 
+    public void setNumVendors(int numVendors) {
+        this.numVendors = numVendors;
+    }
 
+    public int getNumReleases() {
+        return numReleases;
+    }
+
+    public void setNumReleases(int numReleases) {
+        this.numReleases = numReleases;
+    }
+
+    public int getTotTickets() {
+        return totTickets;
+    }
+
+    public void setTotTickets(int totTickets) {
+        this.totTickets = totTickets;
+    }
+
+    @Override
+    public void run(){
+        for(int i = 0; i < numReleases ; i++){
+            for (int j = 0; j < ticketsPerRelease ; j++) {
+                Ticket newTicket = new Ticket(55441 + ticketPool.getCount(), "Hello", 25.00);
+                ticketPool.addTickets(newTicket);
+                ticketPool.setCount(ticketPool.getCount() + 1);
+                //System.out.println("This is Vendor Class run Methode");
+                // System.out.println(newTicket.toString());
+            }
+            try {
+                Thread.sleep(releaseInterval * 1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        //Ticket newTicket = new Ticket(554466,"Hello", 25.00);
+        //ticketPool.addTickets(newTicket);
+        //System.out.println("This is Vendor Class run Methode");
+        //System.out.println(newTicket.toString());
+    }
 }

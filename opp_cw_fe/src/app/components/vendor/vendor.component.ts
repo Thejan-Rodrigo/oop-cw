@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { ConfigFormComponent } from '../config-form/config-form.component';
+import { CommonModule } from '@angular/common';
+import { SimConfigFormComponent } from '../sim-config-form/sim-config-form.component';
 
 @Component({
   selector: 'app-vendor',
   standalone: true,
-  imports: [ConfigFormComponent],
+  imports: [ConfigFormComponent, SimConfigFormComponent, CommonModule],
   templateUrl: './vendor.component.html',
   styleUrl: './vendor.component.css'
 })
 export class VendorComponent {
+
+  currentComponent: string = 'actual'
+
+  changeTab(tabName: string){
+    this.currentComponent = tabName;
+  }
 
 }

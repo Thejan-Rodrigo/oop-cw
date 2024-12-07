@@ -2,11 +2,15 @@ public class Customer implements Runnable{
     private String customerId;
     private int retrievalInterval;
     private TicketPool ticketPool;
+    private int numCustomer;
+    private int ticketPerCustomer;
 
-    public Customer(String customerId, int retrievalInterval, TicketPool ticketPool){
+    public Customer(String customerId, int retrievalInterval, TicketPool ticketPool, int numCustomer, int ticketPerCustomer){
         this.customerId = customerId;
         this.retrievalInterval = retrievalInterval;
         this.ticketPool = ticketPool;
+        this.numCustomer = numCustomer;
+        this.ticketPerCustomer = ticketPerCustomer;
     }
 
     public String getCustomer() {
@@ -25,9 +29,25 @@ public class Customer implements Runnable{
         this.retrievalInterval = retrievalInterval;
     }
 
+    public int getNumCustomer() {
+        return numCustomer;
+    }
+
+    public void setNumCustomer(int numCustomer) {
+        this.numCustomer = numCustomer;
+    }
+
+    public int getTicketPerCustomer() {
+        return ticketPerCustomer;
+    }
+
+    public void setTicketPerCustomer(int ticketPerCustomer) {
+        this.ticketPerCustomer = ticketPerCustomer;
+    }
+
     @Override
     public void run(){
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < ticketPerCustomer; i++){
             Ticket ticket = this.ticketPool.removeTickets();
             //System.out.println("Ticket is - " + ticket + " - Customer name is - " + Thread.currentThread().getName());
 

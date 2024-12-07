@@ -6,6 +6,7 @@ import java.util.Vector;
 public class TicketPool {
     private int maximumTicketCapacity;
     private List<Ticket> vector;
+    private int count = 0;
     private static Logger logger = Logger.getLogger(TicketPool.class);
 
     public TicketPool(int maximumTicketCapacity){
@@ -21,9 +22,18 @@ public class TicketPool {
         this.maximumTicketCapacity = maximumTicketCapacity;
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     public synchronized void addTickets(Ticket ticket){
         while(vector.size() >= maximumTicketCapacity){
             try {
+                logger.warn("Ticket Pool is full! Please wait for someone to buy");
                 wait();
             } catch (InterruptedException e) {
                 logger.error("InterruptedException");
@@ -39,6 +49,7 @@ public class TicketPool {
     public synchronized Ticket removeTickets(){
         while(vector.isEmpty()){
             try {
+                logger.warn("Ticket Pool is Empty! Please wait Vendor to add");
                 wait();
             } catch (InterruptedException e) {
                 logger.error("InterruptedException");

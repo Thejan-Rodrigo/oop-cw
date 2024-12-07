@@ -1,1 +1,18 @@
-<app-config-form></app-config-form>
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="btn-group">
+            <button type="button" (click)="changeTab('actual')" class="btn " [ngClass]="currentComponent == 'actual' ? 'btn-success' : 'btn-primary'" >Actual</button>
+            <button type="button" (click)="changeTab('simulate')" class="btn " [ngClass]="currentComponent == 'simulate' ? 'btn-success' : 'btn-primary'" >Simulate</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12" *ngIf="currentComponent == 'actual'">
+        <app-config-form></app-config-form>
+    </div>
+    <div class="col-12" *ngIf="currentComponent == 'simulate'">
+        <app-sim-config-form></app-sim-config-form>
+    </div>
+</div>
+
