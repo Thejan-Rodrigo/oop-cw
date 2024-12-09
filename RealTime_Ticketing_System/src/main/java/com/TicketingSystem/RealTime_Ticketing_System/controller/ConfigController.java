@@ -1,5 +1,6 @@
 package com.TicketingSystem.RealTime_Ticketing_System.controller;
 
+import com.TicketingSystem.RealTime_Ticketing_System.Ticket;
 import com.TicketingSystem.RealTime_Ticketing_System.dto.ConfigDTO;
 import com.TicketingSystem.RealTime_Ticketing_System.service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ public class ConfigController {
     private ConfigService configService;
 
     @PostMapping("/post")
-    public ConfigDTO postConfig(@RequestBody ConfigDTO configDTO){
+    public Ticket[] postConfig(@RequestBody ConfigDTO configDTO){
         return configService.configService(configDTO);
     }
 }

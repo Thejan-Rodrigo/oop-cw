@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Sim_Config } from '../model/class/Sim_Config';
 import { SimConfigService } from '../services/sim-config.service';
@@ -12,6 +12,11 @@ import { SimConfigService } from '../services/sim-config.service';
   styleUrl: './sim-config-form.component.css'
 })
 export class SimConfigFormComponent {
+
+  @Output() myData = new EventEmitter<string>();
+
+  currentSimConfigComponent: string = ''
+
   sim_configObj: Sim_Config = new Sim_Config();
 
   sim_configService = inject(SimConfigService);
@@ -20,5 +25,13 @@ export class SimConfigFormComponent {
     this.sim_configService.postConfig(this.sim_configObj).subscribe((res:Sim_Config)=>{
       alert(res.ticketPerCustomer)
     })
+
+    this.changeSimTab('ticketPool')
+    
+    this.myData.emit(this.currentSimConfigComponent)
+  }
+
+  changeSimTab(tabName: string){
+    this.currentSimConfigComponent = tabName;
   }
 }

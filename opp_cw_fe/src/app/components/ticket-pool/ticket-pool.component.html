@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-success">
+                Ticket Pool
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Ticket number</th>
+                                    <th>event name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="card">
+            <div class="card-header bg-success">
+                Ticket Details
+            </div>
+            <div class="card-body">
+                <form #form="ngForm">
+                    <div class="row">
+                        <div class="col-8 text-center">
+                            <label for="">Name of the Event</label>
+                            <input type="text" min="1" max="1000" #eventName="ngModel" required name="eventName" [(ngModel)]="ticketObj.eventName" class="from-control">
+                            <div class="text-denger">
+                                @if(eventName?.errors?.['required']){
+                                    <span>This is Required</span>
+                                }
+                            </div>
+    
+                            <label for="">Price of the Ticket</label>
+                            <input type="number" min="1" max="10000" #price="ngModel" required name="price" [(ngModel)]="ticketObj.price" class="from-control">
+                            <div class="text-denger">
+                                @if(price?.errors?.['required']){
+                                    <span>This is Required</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-8 text-center">
+                                <button class="btn btn-success" [disabled]="!form.valid" (click)="onTicketClick()">Release</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

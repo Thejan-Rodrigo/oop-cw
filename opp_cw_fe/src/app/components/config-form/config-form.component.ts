@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Configure } from '../model/class/Configure';
 import { ConfigService } from '../services/config.service';
@@ -11,7 +11,11 @@ import { ConfigService } from '../services/config.service';
   styleUrl: './config-form.component.css'
 })
 export class ConfigFormComponent {
+
+  @Output() myData = new EventEmitter<string>();
   
+  currentConfigComponent: string = ''
+
   configureObj: Configure = new Configure();
 
   configService = inject(ConfigService);
@@ -20,5 +24,16 @@ export class ConfigFormComponent {
     this.configService.postConfig(this.configureObj).subscribe((res:Configure)=>{
       alert(res.numTickets)
     })
+
+    this.changeSimTab('ticketPool')
+
+    this.myData.emit(this.currentConfigComponent)
+
+  }
+
+  changeSimTab(tabName: string){
+    this.currentConfigComponent = tabName;
   }
 }
+
+

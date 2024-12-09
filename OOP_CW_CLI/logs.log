@@ -31432,4 +31432,169 @@
   2024-12-07 17:48:41 INFO  TicketPool:52 - Ticket bought by - customer- current size is - 2 - Ticket is - Ticket{ticketId=55442, eventName='Hello, ticketPrice=25.0} 
   2024-12-07 17:48:41 INFO  TicketPool:52 - Ticket bought by - customer- current size is - 1 - Ticket is - Ticket{ticketId=55442, eventName='Hello, ticketPrice=25.0} 
   2024-12-07 17:48:41 INFO  TicketPool:52 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=55442, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 1
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 2
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 3
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 4
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 5
+  2024-12-09 11:08:59 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 4 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 3 - Ticket is - Ticket{ticketId=55442, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 2 - Ticket is - Ticket{ticketId=55443, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 1 - Ticket is - Ticket{ticketId=55444, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=55445, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 1
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 2
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 3
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 4
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 5
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 6
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 7
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 8
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:08:59 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:08:59 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:08:59 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:00 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:00 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:00 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:00 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:00 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55447, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:00 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55448, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:00 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 7 - Ticket is - Ticket{ticketId=55449, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:00 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 6 - Ticket is - Ticket{ticketId=55450, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:00 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 7
+  2024-12-09 11:09:00 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 8
+  2024-12-09 11:09:00 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:09:00 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:00 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:00 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:01 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55452, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:01 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55453, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:01 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55454, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:01 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55455, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:01 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:09:01 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:01 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:02 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55441, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:02 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55458, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:02 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55459, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:02 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 7 - Ticket is - Ticket{ticketId=55460, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:02 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 8
+  2024-12-09 11:09:02 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:09:02 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:02 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55461, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:03 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55461, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:03 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55463, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:03 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55457, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:03 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55465, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:03 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:03 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55466, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:04 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55467, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:04 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55464, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:04 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:09:04 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55469, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:04 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55470, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:04 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:04 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55462, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:05 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55472, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:05 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55473, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:05 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 7 - Ticket is - Ticket{ticketId=55474, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:05 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 8
+  2024-12-09 11:09:05 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 9
+  2024-12-09 11:09:05 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55475, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:05 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:05 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:06 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55471, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:06 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:06 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:06 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55476, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:06 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:06 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:06 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55478, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:06 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:06 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:06 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55479, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:06 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:06 WARN  TicketPool:36 - Ticket Pool is full! Please wait for someone to buy
+  2024-12-09 11:09:06 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55480, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:06 INFO  TicketPool:45 - Ticket added by - vendor - current size is - 10
+  2024-12-09 11:09:07 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 9 - Ticket is - Ticket{ticketId=55481, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:07 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 8 - Ticket is - Ticket{ticketId=55462, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:07 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 7 - Ticket is - Ticket{ticketId=55483, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:07 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 6 - Ticket is - Ticket{ticketId=55484, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:07 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 5 - Ticket is - Ticket{ticketId=55485, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:08 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 4 - Ticket is - Ticket{ticketId=55486, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:08 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 3 - Ticket is - Ticket{ticketId=55477, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:08 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 2 - Ticket is - Ticket{ticketId=55488, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:08 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 1 - Ticket is - Ticket{ticketId=55489, eventName='Hello, ticketPrice=25.0} 
+  2024-12-09 11:09:08 INFO  TicketPool:61 - Ticket bought by - customer- current size is - 0 - Ticket is - Ticket{ticketId=55490, eventName='Hello, ticketPrice=25.0} 
   
