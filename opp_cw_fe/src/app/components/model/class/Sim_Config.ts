@@ -9,7 +9,6 @@ export class Sim_Config{
     ticketPerRelease:number;
     numRelease: number;
 
-
     constructor(){
         this.numTickets = 0;
         this.releaseRate = 0;

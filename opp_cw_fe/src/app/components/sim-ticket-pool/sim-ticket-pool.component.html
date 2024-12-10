@@ -17,7 +17,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @for(item of ticketList; track $index){
+                                    <tr>
+                                        <td>{{$index + 1}}</td>
+                                        <td>{{item.ticketId}}</td>
+                                        <td>{{item.eventName}}</td>
+                                        <td>{{item.ticketPrice}}</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -41,7 +48,11 @@
                             <h6>{{ticketsSold}}</h6>
 
                             <h6>Numbet of tickets Vendor Add</h6>
-                            <h6>{{ticketsAdd}}</h6>
+                            <h6>{{ticketsDue}}</h6>
+                            <div class="row">
+                                <button type="button" class="btn btn-dark" [disabled]="isPolling" (click)="startPolling()">Start Polling</button>
+                                <button type="button" class="btn btn-danger" [disabled]="!isPolling" (click)="stopPolling()" >Stop Polling</button>
+                            </div>
                         </div>
                     </div>
                 </form>

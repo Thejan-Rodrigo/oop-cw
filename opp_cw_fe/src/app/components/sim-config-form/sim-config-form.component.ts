@@ -20,8 +20,6 @@ export class SimConfigFormComponent {
   sim_configObj: Sim_Config = new Sim_Config();
 
   sim_configService = inject(SimConfigService);
-  pollingService: any;
-  isPolling: boolean = false;
 
   onClickSimStart(){
     this.sim_configService.postConfig(this.sim_configObj).subscribe((res:Sim_Config)=>{
@@ -31,8 +29,6 @@ export class SimConfigFormComponent {
     this.changeSimTab('sim-ticketPool')
     
     this.myData.emit(this.currentSimConfigComponent)
-
-    this.sim_configService.startPolling();
   }
 
   changeSimTab(tabName: string){

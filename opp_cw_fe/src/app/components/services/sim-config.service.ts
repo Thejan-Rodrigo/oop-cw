@@ -10,8 +10,13 @@ import { Sim_Data } from '../model/class/Sim_Data';
   providedIn: 'root'
 })
 export class SimConfigService {
-  private pollingSubscription: Subscription = new Subscription();;
-  private stopPolling$ = new Subject<void>();
+  pollingSubscription: Subscription = new Subscription();;
+  stopPolling$ = new Subject<void>();
+  sim_data: Sim_Data = new Sim_Data()
+  // numAvailable: number = 0;
+  // numSold: number = 0;
+  // tickets: Sim_Ticket[] = [];
+  // numDue: number = 0;
 
   constructor(private http:HttpClient) { }
 
@@ -27,16 +32,6 @@ export class SimConfigService {
     );
   }
   
-  startPolling() {
-    this.pollingSubscription = this.getData().subscribe(data => {
-      // Handle the received data
-      console.log(data);
-    });
-  }
-
-  stopPolling() {
-    this.stopPolling$.next();
-    this.pollingSubscription.unsubscribe();
-  }
+  
 
 }

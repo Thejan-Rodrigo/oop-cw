@@ -6,6 +6,10 @@ import { TicketService } from '../services/ticket.service';
 import SockJS from 'sockjs-client';
 import * as Stomp from 'stompjs';
 import { environment } from '../../../environments/environment.development';
+import { Sim_Config } from '../model/class/Sim_Config';
+import { SimConfigService } from '../services/sim-config.service';
+import { Sim_Data } from '../model/class/Sim_Data';
+import { Sim_Ticket } from '../model/class/Sim_Ticket';
 
 @Component({
   selector: 'app-sim-ticket-pool',
@@ -20,14 +24,54 @@ export class SimTicketPoolComponent implements OnInit{
   }
 
 
-  ticketObj: Ticket = new Ticket()
-  ticketList: Ticket[] = [];
+  sim_configObj: Sim_Config = new Sim_Config();
+  pollingService: any;
+  isPolling: boolean = false;
+
+  ticketObj: Sim_Ticket = new Sim_Ticket()
+  ticketList: Sim_Ticket[] = [];
   
-  ticketService = inject(TicketService)
+  sim_configService = inject(SimConfigService);
 
-  ticketsNum: number = 5;
+  ticketsNum: number = 0;
 
-  ticketsSold: number = 10;
+  ticketsSold: number = 0;
 
-  ticketsAdd: number = 15;
+  ticketsDue: number = 0;
+
+
+  startPolling() {
+    this.sim_configService.pollingSubscription = this.sim_configService.getData().subscribe(data => {
+      this.ticketsNum = data.numAvailable
+      this.ticketsDue = data.numDue
+      this.ticketList = data.tickets
+      this.ticketsSold = data.numSold
+      // Handle the received data
+      this.isPolling = true;
+      console.log(data);
+      console.log(this.ticketsSold)
+    });
+  }
+
+  stopPolling() {
+    this.sim_configService.stopPolling$.next();
+    this.sim_configService.pollingSubscription.unsubscribe();
+    this.isPolling = false;
+  }
+
+
+
+
+  // stratClick(){
+  //   this.sim_configService.startPolling();
+  //   alert(this.ticketsNum)
+  // }
+
+  // stopClick(){
+  //   this.sim_configService.stopPolling();
+  // }
+
+
+  //[disabled]="isPolling" (click)="startPolling()"
+  //[disabled]="!isPolling" (click)="stopPolling()"
 }
