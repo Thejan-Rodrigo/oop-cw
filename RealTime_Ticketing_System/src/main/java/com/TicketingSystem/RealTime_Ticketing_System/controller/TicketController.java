@@ -18,4 +18,9 @@ public class TicketController {
     public Ticket[] postTicket(@RequestBody TicketDTO ticketDTO){
         return ticketService.ticketService(ticketDTO);
     }
+
+    @GetMapping("/get")
+    public Ticket[] getTicket(){
+        return ticketService.getTicketsArray();
+    }
 }

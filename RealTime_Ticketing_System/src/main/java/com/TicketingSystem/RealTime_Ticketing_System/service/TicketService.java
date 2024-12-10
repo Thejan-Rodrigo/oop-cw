@@ -19,4 +19,8 @@ public class TicketService {
         Main.setTicket(ticketDTO, ConfigService.ticketPool);
         return ConfigService.ticketPool.getTickets();
     }
+
+    public Ticket[] getTicketsArray(){
+        return ConfigService.ticketPool.getTickets();
+    }
 }

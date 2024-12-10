@@ -1,13 +1,11 @@
-export class Ticket{
+export class Sim_Ticket{
     ticketId: number;
     eventName: string;
-    price: number;
-    numTickets: number;
+    ticketPrice: number;
 
     constructor(){
         this.ticketId = 0;
         this.eventName = '';
-        this.price = 0;
-        this.numTickets = 0;
+        this.ticketPrice = 0;
     }
 }

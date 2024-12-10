@@ -13,8 +13,8 @@ public class Main {
 
     }
     public static void setTicket(TicketDTO ticketDTO, TicketPool ticketPool1){
-        for(int i = 0; i < 5; i++){
-            Ticket ticket = new Ticket(1 + i, ticketDTO.getEventName(), ticketDTO.getPrice());
+        for(int i = 0; i < ticketDTO.getNumTickets(); i++){
+            Ticket ticket = new Ticket(ticketDTO.getTicketId() + i, ticketDTO.getEventName(), ticketDTO.getPrice());
             ticketPool1.addTickets(ticket);
             System.out.println(ticketPool1.getVectorSize());
         }

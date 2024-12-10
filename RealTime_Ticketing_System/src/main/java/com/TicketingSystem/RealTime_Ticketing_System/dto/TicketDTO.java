@@ -8,8 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class TicketDTO {
+    private int ticketId;
     private String eventName;
     private int price;
+    private int numTickets;
 
     public String getEventName() {
         return eventName;
@@ -17,5 +19,13 @@ public class TicketDTO {
 
     public int getPrice() {
         return price;
+    }
+
+    public int getNumTickets() {
+        return numTickets;
+    }
+
+    public int getTicketId() {
+        return ticketId;
     }
 }

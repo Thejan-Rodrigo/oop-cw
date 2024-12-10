@@ -12,10 +12,14 @@
         <app-config-form (myData)="childData('ticketPool')"></app-config-form>
     </div>
     <div class="col-12" *ngIf="currentComponent == 'simulate'">
-        <app-sim-config-form (myData)="childData('ticketPool')"></app-sim-config-form>
+        <app-sim-config-form (myData)="childData('sim-ticketPool')"></app-sim-config-form>
+    </div>
+    <div class="col-12" *ngIf="currentComponent == 'sim-ticketPool'">
+        <app-sim-ticket-pool></app-sim-ticket-pool>
     </div>
     <div class="col-12" *ngIf="currentComponent == 'ticketPool'">
         <app-ticket-pool></app-ticket-pool>
     </div>
+    
 </div>
 

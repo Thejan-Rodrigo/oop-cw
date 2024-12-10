@@ -34,6 +34,7 @@ export class ConfigFormComponent {
   changeSimTab(tabName: string){
     this.currentConfigComponent = tabName;
   }
+
 }
 
 
