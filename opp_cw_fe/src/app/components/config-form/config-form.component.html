@@ -1,53 +1,52 @@
-<div class="row">
-    <div class="col-3">
-        <div class="card">
-          <div class="card-header bg-success">
-                Configuration Form
+
+<div class="conteinar">  
+    <div class="card">
+        <div class="card-header bg-success">
+            Configuration Form
         </div>
-            <div class="card-body">
-                <form #form="ngForm" >
-                    <div class="row">
-                        <div class="col-8 text-center">
-                            <label for="">Total Number of Tickets</label>
-                            <input type="number" min="1" max="1000" #box1="ngModel" required name="numTickets" [(ngModel)]="configureObj.numTickets" class="from-control">
-                            <div class="text-denger">
-                                @if(box1?.errors?.['required']){
-                                    <span>This is Required</span>
-                                }
-                            </div>
-                        
-                            <label for="">Ticket Release Rate</label>
-                            <input type="number" min="1" max="1000" #box2="ngModel" required name="releaseRate" [(ngModel)]="configureObj.releaseRate" class="from-control">
-                            <div class="text-denger">
-                                @if(box2?.errors?.['required']){
-                                    <span>This is Required</span>
-                                }
-                            </div>
-    
-                            <label for="">Customer Retrieval Rate</label>
-                            <input type="number" min="1" max="1000" #box3="ngModel" required name="retrievalRate" [(ngModel)]="configureObj.retrievalRate" class="from-control">
-                            <div class="text-denger">
-                                @if(box3?.errors?.['required']){
-                                    <span>This is Required</span>
-                                }
-                            </div>
-    
-                            <label for="">Maximum Ticket Capacity</label>
-                            <input type="number" min="1" max="1000" #box4="ngModel" required name="ticketCapacity" [(ngModel)]="configureObj.ticketCapacity" class="from-control">
-                            <div class="text-denger">
-                                @if(box4?.errors?.['required']){
-                                    <span>This is Required</span>
-                                }
-                            </div>
+        <div class="card-body">
+            <form #form="ngForm" >
+                
+                    
+                    <label for="" >Total Number of Tickets</label>
+                        <input type="number" min="1" max="1000" #box1="ngModel" required name="numTickets" [(ngModel)]="configureObj.numTickets" class="from-control">
+                        <div class="text-danger">
+                            @if(box1?.errors?.['required']){
+                                <span>This is Required</span>
+                            }
                         </div>
-                        <div class="row pt-2">
-                            <div class="col-8 text-center">
-                                <button class="btn btn-success" [disabled] = "!form.valid" (click)="onClickStart()">Start</button>
-                            </div>
+                    
+                       <label for="">Ticket Release Rate</label>
+                        <input type="number" min="1" max="1000" #box2="ngModel" required name="releaseRate" [(ngModel)]="configureObj.releaseRate" class="from-control">
+                        <div class="text-danger">
+                            @if(box2?.errors?.['required']){
+                                <span>This is Required</span>
+                            }
+                        </div>
+
+                        <label for="">Customer Retrieval Rate</label>
+                        <input type="number" min="1" max="1000" #box3="ngModel" required name="retrievalRate" [(ngModel)]="configureObj.retrievalRate" class="from-control">
+                        <div class="text-danger">
+                            @if(box3?.errors?.['required']){
+                                <span>This is Required</span>
+                            }
+                        </div>
+    
+                        <label for="">Maximum Ticket Capacity</label>
+                        <input type="number" min="1" max="1000" #box4="ngModel" required name="ticketCapacity" [(ngModel)]="configureObj.ticketCapacity" class="from-control">
+                        <div class="text-danger">
+                            @if(box4?.errors?.['required']){
+                                <span>This is Required</span>
+                            }
+                        </div>
+                    
+                    <div class="row pt-2">
+                        <div class="col-8 text-center">
+                            <button class="btn btn-success" [disabled] = "!form.valid" (click)="onClickStart()">Start</button>
                         </div>
                     </div>
-                </form>
-            </div>
+                
+            </form>
         </div>
     </div>
 </div>

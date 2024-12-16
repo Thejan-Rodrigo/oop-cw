@@ -12,7 +12,7 @@ public class SimTicketPool {
     private int count = 0;
     private int sold = 0;
     private int totalTicket;
-    //private static Logger logger = Logger.getLogger(SimTicketPool.class);
+    private static Logger logger = Logger.getLogger(SimTicketPool.class);
 
     public SimTicketPool(int maximumTicketCapacity, int totalTicket){
         this.maximumTicketCapacity = maximumTicketCapacity;
@@ -63,28 +63,28 @@ public class SimTicketPool {
     public synchronized void addTickets(SimTicket ticket){
         while(vector.size() >= maximumTicketCapacity){
             try {
-                //logger.warn("Ticket Pool is full! Please wait for someone to buy");
-                System.out.println("Ticket Pool is full! Please wait for someone to buy");
+                logger.warn("Ticket Pool is full! Please wait for someone to buy");
+                //System.out.println("Ticket Pool is full! Please wait for someone to buy");
                 wait();
                 System.out.println("Add ticket OUT");
             } catch (InterruptedException e) {
-                //logger.error("InterruptedException");
+                logger.error("InterruptedException");
                 throw new RuntimeException(e);
             }
         }
 
         this.vector.add(ticket);
 
-        //logger.info("Ticket added by - " + Thread.currentThread().getName() + " - current size is - " + this.vector.size());
-        System.out.println("Ticket added by - " + Thread.currentThread().getName() + " - current size is - " + this.vector.size());
+        logger.info("Ticket added by - " + Thread.currentThread().getName() + " - current size is - " + this.vector.size());
+        //System.out.println("Ticket added by - " + Thread.currentThread().getName() + " - current size is - " + this.vector.size());
         notifyAll();
     }
 
     public synchronized SimTicket removeTickets(){
         while(vector.isEmpty()){
             try {
-                //logger.warn("Ticket Pool is Empty! Please wait Vendor to add");
-                System.out.println("Ticket Pool is Empty! Please wait Vendor to add");
+                logger.warn("Ticket Pool is Empty! Please wait Vendor to add");
+                //System.out.println("Ticket Pool is Empty! Please wait Vendor to add");
                 wait();
                 System.out.println("remove ticket OUT");
             } catch (InterruptedException e) {
@@ -95,8 +95,8 @@ public class SimTicketPool {
 
         SimTicket ticket = this.vector.remove(0);
         this.sold++;
-        //logger.info("Ticket bought by - " + Thread.currentThread().getName() + "- current size is - "+ vector.size() + " - Ticket is - " + ticket + " ");
-        System.out.println("Ticket bought by - " + Thread.currentThread().getName() + "- current size is - "+ vector.size() + " - Ticket is - " + ticket + " ");
+        logger.info("Ticket bought by - " + Thread.currentThread().getName() + "- current size is - "+ vector.size() + " - Ticket is - " + ticket + " ");
+        //System.out.println("Ticket bought by - " + Thread.currentThread().getName() + "- current size is - "+ vector.size() + " - Ticket is - " + ticket + " ");
         notifyAll();
         return ticket;
     }

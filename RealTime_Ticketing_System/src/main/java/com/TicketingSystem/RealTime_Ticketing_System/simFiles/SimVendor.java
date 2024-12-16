@@ -70,7 +70,9 @@ public class SimVendor implements Runnable{
     @Override
     public void run(){
         for(int i = 0; i < numReleases ; i++){
+            //System.out.println(Thread.currentThread().getName() + "   Release number" + (i+1));
             for (int j = 0; j < ticketsPerRelease ; j++) {
+                System.out.println(Thread.currentThread().getName() + "   Release number" + (i+1)+ "  Ticket number " + (j+1));
                 SimTicket newTicket = new SimTicket(55441 + ticketPool.getCount(), "Hello", 2500);
                 ticketPool.addTickets(newTicket);
                 ticketPool.setCount(ticketPool.getCount() + 1);

@@ -2,9 +2,11 @@ package com.TicketingSystem.RealTime_Ticketing_System;
 
 import com.TicketingSystem.RealTime_Ticketing_System.dto.ConfigDTO;
 import com.TicketingSystem.RealTime_Ticketing_System.dto.TicketDTO;
+import org.apache.log4j.BasicConfigurator;
 
 public class Main {
     public static void setConfiguration(ConfigDTO configDTO){
+        BasicConfigurator.configure();
         TicketPool ticketPool1;
         Configuration configuration = new Configuration(configDTO.getNumTickets(), configDTO.getReleaseRate(), configDTO.getRetrievalRate(), configDTO.getTicketCapacity());
 

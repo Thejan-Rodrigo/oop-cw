@@ -21,6 +21,7 @@ import { Sim_Ticket } from '../model/class/Sim_Ticket';
 export class SimTicketPoolComponent implements OnInit{
 
   ngOnInit(): void {
+    this.startPolling()
   }
 
 

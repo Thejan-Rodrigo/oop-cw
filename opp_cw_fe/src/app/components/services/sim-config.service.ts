@@ -25,7 +25,7 @@ export class SimConfigService {
   }
 
   getData(): Observable<Sim_Data> {
-    return interval(2000).pipe(
+    return interval(1000).pipe(
       takeUntil(this.stopPolling$),
       switchMap(() => this.http.get<Sim_Data>(environment.API_URL + 'sim_config/get')),
       map(response => response)

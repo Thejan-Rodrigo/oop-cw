@@ -9,72 +9,80 @@
                     <div class="row">
                         <div class="col-8 text-center">
                             <label for="">Total Number of Tickets</label>
-                            <input type="number" min="1" max="1000" #numberOfTickets="ngModel" required name="numTickets" [(ngModel)]="sim_configObj.numTickets" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #numberOfTickets="ngModel" required name="numTickets" [(ngModel)]="sim_configObj.numTickets" class="from-control">
+                            <div class="text-danger">
                                 @if(numberOfTickets?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Ticket Release Rate</label>
-                            <input type="number" min="1" max="1000" #ticketReleaseRate="ngModel" required name="releaseRate" [(ngModel)]="sim_configObj.releaseRate" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #ticketReleaseRate="ngModel" required name="releaseRate" [(ngModel)]="sim_configObj.releaseRate" class="from-control">
+                            <div class="text-danger">
                                 @if(ticketReleaseRate?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Customer Retrieval Rate</label>
-                            <input type="number" min="1" max="1000" #customrtRetrievalRate="ngModel" required name="retrievalRate" [(ngModel)]="sim_configObj.retrievalRate" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #customrtRetrievalRate="ngModel" required name="retrievalRate" [(ngModel)]="sim_configObj.retrievalRate" class="from-control">
+                            <div class="text-danger">
                                 @if(customrtRetrievalRate?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Maximum Ticket Capacity</label>
-                            <input type="number" min="1" max="1000" #maximumTicketCapacity="ngModel" required name="ticketCapacity" [(ngModel)]="sim_configObj.ticketCapacity" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #maximumTicketCapacity="ngModel" required name="ticketCapacity" [(ngModel)]="sim_configObj.ticketCapacity" class="from-control">
+                            <div class="text-danger">
                                 @if(maximumTicketCapacity?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Number of Customers</label>
-                            <input type="number" min="1" max="1000" #numberOfCustomers="ngModel" required name="numCustomer" [(ngModel)]="sim_configObj.numCustomer" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #numberOfCustomers="ngModel" required name="numCustomer" [(ngModel)]="sim_configObj.numCustomer" class="from-control">
+                            <div class="text-danger">
                                 @if(numberOfCustomers?.errors?.['required']){
                                     <span>This is Required</span>
+                                }
+
+                                @if((sim_configObj.numCustomer*sim_configObj.ticketPerCustomer) != sim_configObj.numTickets){
+                                    <span>Custorme should buy all tickets</span>
                                 }
                             </div>
 
                             <label for="">Tickets per Customer</label>
-                            <input type="number" min="1" max="1000" #ticketsPerCustomer="ngModel" required name="ticketPerCustomer" [(ngModel)]="sim_configObj.ticketPerCustomer" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #ticketsPerCustomer="ngModel" required name="ticketPerCustomer" [(ngModel)]="sim_configObj.ticketPerCustomer" class="from-control">
+                            <div class="text-danger">
                                 @if(ticketsPerCustomer?.errors?.['required']){
                                     <span>This is Required</span>
+                                }
+
+                                @if((sim_configObj.numCustomer*sim_configObj.ticketPerCustomer) != sim_configObj.numTickets){
+                                    <span>Custorme should buy all tickets</span>
                                 }
                             </div>
 
                             <label for="">number of Vendors</label>
-                            <input type="number" min="1" max="1000" #numberOfVendors="ngModel" required name="numVendors" [(ngModel)]="sim_configObj.numVendors" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #numberOfVendors="ngModel" required name="numVendors" [(ngModel)]="sim_configObj.numVendors" class="from-control">
+                            <div class="text-danger">
                                 @if(numberOfVendors?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Tickets per Release</label>
-                            <input type="number" min="1" max="1000" #ticketsPerRelease="ngModel" required name="ticketPerRelease" [(ngModel)]="sim_configObj.ticketPerRelease" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #ticketsPerRelease="ngModel" required name="ticketPerRelease" [(ngModel)]="sim_configObj.ticketPerRelease" class="from-control">
+                            <div class="text-danger">
                                 @if(ticketsPerRelease?.errors?.['required']){
                                     <span>This is Required</span>
                                 }
                             </div>
 
                             <label for="">Number of Release</label>
-                            <input type="number" min="1" max="1000" #numberOfRelease="ngModel" required name="numRelease" [(ngModel)]="sim_configObj.numRelease" class="from-control">
-                            <div class="text-denger">
+                            <input type="number" min="1" max="1000" placeholder="Enter Here" #numberOfRelease="ngModel" required name="numRelease" [(ngModel)]="sim_configObj.numRelease" class="from-control">
+                            <div class="text-danger">
                                 @if(numberOfRelease?.errors?.['required']){
                                     <span>This is Required</span>
                                 }

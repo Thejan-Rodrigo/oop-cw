@@ -40,17 +40,17 @@
             <div class="card-body">
                 <form #form="ngForm">
                     <div class="row">
-                        <div class="col-9 text-center">
+                        <div class="col-10 text-center">
                             <h6>Number of Tickets Available</h6>
                             <h6>{{ticketsNum}}</h6>
                             
                             <h6>Numbet of tickets Sold</h6>
                             <h6>{{ticketsSold}}</h6>
 
-                            <h6>Numbet of tickets Vendor Add</h6>
+                            <h6>Numbet of Due Tickets</h6>
                             <h6>{{ticketsDue}}</h6>
                             <div class="row">
-                                <button type="button" class="btn btn-dark" [disabled]="isPolling" (click)="startPolling()">Start Polling</button>
+                                
                                 <button type="button" class="btn btn-danger" [disabled]="!isPolling" (click)="stopPolling()" >Stop Polling</button>
                             </div>
                         </div>

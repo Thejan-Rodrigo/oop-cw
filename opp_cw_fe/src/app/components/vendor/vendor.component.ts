@@ -14,7 +14,7 @@ import { SimTicketPoolComponent } from '../sim-ticket-pool/sim-ticket-pool.compo
 })
 export class VendorComponent {
 
-  currentComponent: string = 'sim-ticketPool'
+  currentComponent: string = 'simulate'
 
   changeTab(tabName: string){
     this.currentComponent = tabName;

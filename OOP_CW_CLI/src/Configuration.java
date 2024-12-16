@@ -11,6 +11,7 @@ public class Configuration {
     private int customerRetrievalRate;
     private int maxTicketCapacity;
 
+    //Create a constructor for initialize object
     public Configuration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity){
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
@@ -18,6 +19,7 @@ public class Configuration {
         this.maxTicketCapacity = maxTicketCapacity;
     }
 
+    //Implement Getters Setters
     public int getTotalTickets() {
         return totalTickets;
     }
@@ -50,6 +52,7 @@ public class Configuration {
         this.maxTicketCapacity = maxTicketCapacity;
     }
 
+    //Override run method
     @Override
     public String toString(){
         return "{\"totalTickets\":" + this.totalTickets + ",\"ticketReleaseRate\":" + this.ticketReleaseRate + ",\"customerRetrievalRate\":" + this.customerRetrievalRate + ",\"maxTicketCapacity\":" + this.maxTicketCapacity + "}";

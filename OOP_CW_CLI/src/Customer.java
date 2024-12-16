@@ -1,10 +1,14 @@
 public class Customer implements Runnable{
+    //Implements the runnable method for create a thread and override the rum method
+
+    //Get these parameters to run the Customer Thread
     private String customerId;
     private int retrievalInterval;
     private TicketPool ticketPool;
     private int numCustomer;
     private int ticketPerCustomer;
 
+    //Create a constructor for initialize object
     public Customer(String customerId, int retrievalInterval, TicketPool ticketPool, int numCustomer, int ticketPerCustomer){
         this.customerId = customerId;
         this.retrievalInterval = retrievalInterval;
@@ -13,6 +17,7 @@ public class Customer implements Runnable{
         this.ticketPerCustomer = ticketPerCustomer;
     }
 
+    //Implement Getters Setters
     public String getCustomer() {
         return customerId;
     }
@@ -45,19 +50,19 @@ public class Customer implements Runnable{
         this.ticketPerCustomer = ticketPerCustomer;
     }
 
+    //Override the run method
     @Override
     public void run(){
+        //Buy Ticket according to the user inputs
         for(int i = 0; i < ticketPerCustomer; i++){
             Ticket ticket = this.ticketPool.removeTickets();
-            //System.out.println("Ticket is - " + ticket + " - Customer name is - " + Thread.currentThread().getName());
 
+            //sleep the thread according to the User Input
             try {
                 Thread.sleep(retrievalInterval * 1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-        //System.out.println("This is Customer class run Method");
-        //System.out.println(Thread.currentThread().getName());
     }
 }

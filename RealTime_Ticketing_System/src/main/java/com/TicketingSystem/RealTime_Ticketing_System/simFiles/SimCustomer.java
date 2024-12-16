@@ -50,6 +50,7 @@ public class SimCustomer implements Runnable{
     @Override
     public void run(){
         for(int i = 0; i < ticketPerCustomer; i++){
+            System.out.println(Thread.currentThread().getName() + "   Release number" + (i+1));
             SimTicket ticket = this.ticketPool.removeTickets();
             //System.out.println("Ticket is - " + ticket + " - Customer name is - " + Thread.currentThread().getName());
 
